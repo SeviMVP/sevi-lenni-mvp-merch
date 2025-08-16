@@ -34,6 +34,11 @@ header {
   border-radius: 5px;
 }
 
+.product-card img {
+  max-width: 200px;
+  border radius: 5px;
+}
+
 .price {
   font-size: 18px;
   margin: 10px 0;
