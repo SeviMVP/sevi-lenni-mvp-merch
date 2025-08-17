@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,48 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Sevi&Lenni MVP Merch</h1>
-    </header>
-    <main>
-        <section class="category">
-            <h2>Flopper-Merch</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="cap.jpeg" alt="Flopper Cap">
-                    <h3>Flopper T-Shirt</h3>
-                    <p>19,99€</p>
-                    <span class="soldout">Ausverkauft</span>
-                </div>
-                <div class="card">
-                    <img src="hoodie.jpeg" alt="Flopper Hoodie">
-                    <h3>Flopper Hoodie</h3>
-                    <p>39,99€</p>
-                    <span class="soldout">Ausverkauft</span>
-                </div>
-                <div class="card">
-                    <img src="tshirt.jpeg" alt="Flopper Tshirt">
-                    <h3>Flopper Cap</h3>
-                    <p>14,99€</p>
-                    <span class="soldout">Ausverkauft</span>
-                </div>
-            </div>
-        </section>
+    <h1>Sevi&Lenni MVP Merch</h1>
+    <nav>
+        <ul>
+            <li><a href="#flopper">Flopper Merch</a></li>
+            <li><a href="#mvp">MVP Merch</a></li>
+            <li><a href="#powermvp">PowerMVP Merch</a></li>
+        </ul>
+    </nav>
 
-        <section class="category">
-            <h2>MVP-Merch</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="shorts.jpeg" alt="MVP Shorts">
-                    <h3>MVP Shorts</h3>
-                    <p>24,99€</p>
-                    <span class="soldout">Ausverkauft</span>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© Sevi&Lenni MVP</p>
-    </footer>
+    <section id="powermvp">
+        <h2>PowerMVP Merch</h2>
+        <div class="product">
+            <img src="maschine.jpg" alt="PowerMVP Maschine">
+            <p>PowerMVP Maschine - 79,99 €</p>
+        </div>
+        <div class="product">
+            <img class="swipe" src="flasche_rot.jpg" data-alt="flasche_blau.jpg" alt="PowerMVP Trinkflasche">
+            <p>PowerMVP Trinkflasche - 9,99 €</p>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll(".swipe").forEach(img => {
+            img.addEventListener("click", () => {
+                let current = img.getAttribute("src");
+                let alt = img.getAttribute("data-alt");
+                img.setAttribute("src", alt);
+                img.setAttribute("data-alt", current);
+            });
+        });
+    </script>
 </body>
 </html>
